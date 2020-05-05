@@ -32,7 +32,7 @@ The AUC for the CV training set is 0.72 and could be as high as 0.73 within the 
 1. Interestingly, the model performed better on the test set when trained on the imbalanced dataset
 . 
 
-    I think this is because the whole point of adadelta boosting is that subsequent learners try to
+    I think this is because the whole point of adaboosting is that subsequent learners try to
 predict the mistakes of earlier ones. Thus if you give it loads of (duplicate) examples of the
  minority
 class and the first few learners get these wrong, they will be weighted more heavily for later
@@ -46,7 +46,7 @@ possibly at the detriment of the majority class.
     churn, appetency, and up-selling so an average of 1 hour per task. My model could be retrained in about 30 seconds because of my use of the smaller dataset with far less features. However, as detailed in the [report](http://www.vincentlemaire-labs.fr/publis/jmlrwcp_2009_camera_ready.pdf) following the
     competition, the majority of teams did better on the larger training set. So performing at
     95 % (0.71/0.7435) and 93% (0.71/0.7651) of the Orange and compeition winner's models by
-     using the smaller dataset seems pretty good. It would be a business decision as to whether to increase in AUC from using a model that takes an hour to train is worth ti compared to a model that could be retrained in seconds. For Orange I image it does matter since they probably lose a lot of money from customers leaving and they presumely have the resources to retrain models for an hour.
+     using the smaller dataset seems pretty good. It would be a business decision as to whether to increase in AUC from using a model that takes an hour to train is worth it compared to a model that could be retrained in seconds. For Orange I imagine it does matter since they probably lose a lot of money from customers leaving and they presumely have the resources to retrain models for an hour (not to mention the people to tweak these models).
      
  3. I did not revisit data cleaning.
     
@@ -76,6 +76,7 @@ possibly at the detriment of the majority class.
 ## Key takeaways
 
 1. Data wrangling took up a significant portion of my time due to the nature of the data
+ Pratice data wrangling as real world data is ugly and messy
 2. Features are not always distributed normally - use both logic and the data to deal with this
 3. Adaboost can make even terrible decisions trees great
     
