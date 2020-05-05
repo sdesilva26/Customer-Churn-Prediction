@@ -43,11 +43,10 @@ possibly at the detriment of the majority class.
  achieves a AUC of 0.7435.
  
     The in-house classifier takes 3 hours to train. This is for all three tasks of predicting
-    churn, appetency, and up-selling so an average of 1 hour per task. They also utilise the
-    larger training set with 16,000 features. As detailed in the [report](http://www.vincentlemaire-labs.fr/publis/jmlrwcp_2009_camera_ready.pdf) following the
+    churn, appetency, and up-selling so an average of 1 hour per task. My model could be retrained in about 30 seconds because of my use of the smaller dataset with far less features. However, as detailed in the [report](http://www.vincentlemaire-labs.fr/publis/jmlrwcp_2009_camera_ready.pdf) following the
     competition, the majority of teams did better on the larger training set. So performing at
     95 % (0.71/0.7435) and 93% (0.71/0.7651) of the Orange and compeition winner's models by
-     using the smaller dataset seems pretty good.
+     using the smaller dataset seems pretty good. It would be a business decision as to whether to increase in AUC from using a model that takes an hour to train is worth ti compared to a model that could be retrained in seconds. For Orange I image it does matter since they probably lose a lot of money from customers leaving and they presumely have the resources to retrain models for an hour.
      
  3. I did not revisit data cleaning.
     
